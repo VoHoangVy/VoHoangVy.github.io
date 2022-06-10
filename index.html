@@ -1,104 +1,186 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Trang Chu</title>
-    <link rel="stylesheet" type="test/css" href="css/style.css"
-          </head>
+    <head>
+        <title>Trang chủ</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    </head>
     <body>
-      <header>
-        <div class ="main">
-          <div class="logo">
-            <img src="https://img.freepik.com/free-vector/gamer-anime-boy-playing-smart-phone-esport-logo_162048-188.jpg">
-            <ul>            
-            <li><a href="#">Trang Chủ</a></li>
-            <li><a href="index2.html">Thông tin cá nhân</a></li>
-            <li><a href="index3.html">Học Tập</a></li>     
-          </ul>
+        <div class="hero">
+            <nav>
+                <h2 class="logo">Võ Hoàng Vỹ</h2>
+                <ul>
+                    <li><a href="#">Trang Chủ</a></li>
+                    <li><a href="#">Thông Tin</a></li>
+                    <li><a href="#">Liên Hệ</a></li>
+                </ul>
+            </nav>
+            <div class="content">
+                <h4>Tên tôi là Hoàng Vỹ</h4>
+                <h1>Biệt danh : Su <span>Hào</span></h1>
+                <h3>Tập sự Design</h3>
+                <div class="newslatter">
+                    <form>
+                        <input type="email" name="email" id="mail" placeholder="Tìm Kiếm....">
+                        <input type="submit" name="submit" value="Bất Đầu">
+                    </form>
+                </div>
+            </div>
         </div>
-          <div class="title">
-            <h1>Learn How To Play<h1>
-              </div>
-              <div class="button">
-                <form class="example" action="" style="margin:auto;max-width:300px;">
-        <input type="text" placeholder="Search.." name="search">
-        <button type="submit"><i class="fa fa-search"></i></button>
-      </header>
+        <footer>
+            <p>Liên Hệ</p>
+           <div class="social">
+            <a href="#"><i class="fa-brands fa-facebook"></i>
+            <a href="#"><i class="fa-brands fa-instagram"></i>
+            <a href="#"><i class="fa-brands fa-youtube"></i>
+           </div>
+        </footer>     
     </body>
-   </html>
-<header>
-  <style>
-    *{
-  margin: 0;
-  padding: 0;
-  font-family:
+</html>
+          <style>
+            *{
+    padding: 0;
+    margin: 0;
+    font-family: 'Josefin Sans', sans-serif;
+    box-sizing: border-box;
 }
-header{
-  background-image: url(https://st.quantrimang.com/photos/image/2020/10/01/hinh-nen-den.jpg);
-  height: 100vh;
-  background-size: cover;
-  background-position: center;
+.hero{
+    height: 100vh;
+    width: 100%;
+    background-image: url(https://st.quantrimang.com/photos/image/2020/10/01/hinh-nen-den.jpg);
+    background-size: cover;
+    background-position: center;
 }
-
-ul{
-  float: right;
-  list-style-tupe: none;
-  margin-top: 25px
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 45px;
+    padding-left: 8%;
+    padding-right: 8%; 
 }
-
-ul li{
-  display: inline-block;
+.logo{
+    color: white;
+    font-size: 35px;
+    letter-spacing: 1px;
+    cursor: pointer;
 }
-
-ul li a{
-  text-decoration: none;
-  color: #F0FFFF;
-  padding: 5px 20px;
-  border: 1px solid #F0FFFF;
-  transition: 0.6s ease;
-  
+span{
+    color: #f9004d;
 }
-
-ul li a:hover{
-  background-color: #fff;
-  color: #000;
+nav ul li{
+    list-style-type: none;
+    display: inline-block;
+    padding: 10px 25px;
 }
-
-.logo img{
-   float: left;
-  width: 150px;
-  height: auto;
+nav ul li a{
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: capitalize;
 }
-
-main{
-  max-width:
+nav ul li a:hover{
+    color :#f9004d;
+    transition: .4s;
 }
-
-.title{
-  position: absolute;
-  top : 40%;
-  left: 40%;
-  trasform: translate(-50%,-50%);
-  
-}
-
-.title{
- color: #fff;
-  font-size: 30px;
-}
-
-.button{
-  position: absolute;
-  top : 60%;
-  left: 45%;
-  trasform: translate(-50%,-50%);
-  font-size: 20;
-}
-
 .btn{
-  border: 1px soild #fff;
-  padding: 10px 30px;
-  color: #fff;
-  text-decoraction: none;
+    background-color: #f9004d;
+    color: white;
+    text-decoration: none;
+    border: 2px solid transparent;
+    font-weight: bold;
+    padding: 10px 25px;
+    border-radius: 30px;
 }
-    
-   
+.btn:hover{
+    transform: scale(1.2);    
+}
+.content{
+    position: absolute;
+    top: 50%;
+    left: 8%;
+    transform: translateY(-50%);
+}
+h1{
+    color: white;
+    margin: 20px 0px 20px;
+    font-size: 75px;
+}
+h3{
+    color: white;
+    font-size: 25px;
+    margin-bottom: 50px;
+}
+h4{
+    color: #fcfc;
+    letter-spacing: 2px;
+    font-size: 20px;
+}
+.newslatter form{
+    width: 380px;
+    max-width: 100%;
+    position: relative;
+}
+.newslatter form input:first-child{
+    display: inline-block;
+    width: 100%;
+    padding: 14px 130px 14px 15px;
+    border: 2px solid #f9004d;
+    outline: none;
+    border-radius: 30px;
+}
+.newslatter form input:last-child{
+    position: absolute;
+    display: inline-block;
+    outline: none;
+    border: none;
+    padding: 10px 30px;
+    border-radius: 30px;
+    background-color: #f9004d;
+    color: white;
+    box-shadow: 0px 0px 5px #000, 0px 0px 15px #858585;
+    top: 6px;
+    right: 6px;
+}
+footer{
+    position: relative;
+    width: 100%;
+    height: 400px;
+    background: #101010;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+footer p:nth-child(1){
+    font-size: 30px;
+    color: white;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+footer p:nth-child(2){
+    color: white;
+    font-size: 17px;
+    width: 500px;
+    text-align: center;
+    line-height: 26px;
+}
+.social{
+   display: flex; 
+}
+.social a{
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f9004d;
+    border-radius: 50%;
+    margin: 22px 10px;
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+}
+.social a:hover{
+    transform: scale(1.3);
+    transition: .3s;
+}
