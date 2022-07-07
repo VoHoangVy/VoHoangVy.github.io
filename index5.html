@@ -1,1 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-compatible" content="IE=edge">
+    <title>Trang Chu</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+</html>
+<body>
+    <header class="header">
+        <a href="#" class="logo">
+            <img src="https://tranhuudantruong.github.io/assetss/logo.png" alt=""> 
+        </a>
+        <nav class="navbar">
+            <a href="#">Home</a>
+            <a href="#">Home</a>
+            <a href="#">Home</a>
+            <a href="#">Home</a>
+            <a href="#">Home</a>
+        </nav>
+        <div class="icons">
+            <div class="fas fa-search" id="search-btn"></div>
+            <div class="fas fa-shopping-cart" id="cart-btn"></div>
+            <div class="fas fa-bars" id="menu-btn"></div>
+        </div>
 
+        <div class="search-form ">
+            <input type="search" id="search-box" placeholder="search here...">
+            <label for="search-box" class="fas-fa-search"></label>
+        </div>
+    </header>
+    <section class="home" id="home">
+        <div class="content">
+            <h3>tui la eland</h3>
+            <p>biet danh la su hao</p>
+            <a href="#" class="btn">tim hieu them</a>
+        </div>
+    </section>
+</body>
+<style>
+  :root{
+    --maincolor:#d3ad7f;
+    --black:#13131a;
+    --bg:#010103;
+    --border:.1rem soild rgba(255,255,255,.3);
+}
+*{
+    font-family: 'Roboto',sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none; border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: .2s linear;
+}
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 9rem;
+    scroll-behavior: smooth;
+}
+html::-webkit-scrollbar{
+    width: .8rem;
+}
+html::-webkit-scrollbar-track{
+    background: transparent;
+}
+html::-webkit-scrollbar-thumb{
+    background: #fff;
+    border-radius: .5rem;
+}
+body{
+    background: var(--bg);
+}
+header{
+    background: var(--bg);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem 7%;
+    border-bottom: var(--border);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+.header .logo img{
+    height: 6rem;
+}
+.header .navbar a{
+    margin: 0.1rem;
+    font-size: 1.6rem;
+    color: #fff;
+}
+
+.header.navbar a:hover{
+    color: var(--maincolor);
+    border-bottom: .1rem soild var(--maincolor);
+    padding-bottom: .5rem;
+}
+.header .icons div{
+    color: #fff;
+    cursor: pointer;
+    font-size: 2.5rem;
+    margin-left: 2rem;
+}
+.header.icons div:hover{
+    color: var(--maincolor); 
+}
+#menu-btn{
+    display: none;
+}
+.header .search-from{
+    position: absolute;
+    top: 115%;
+    right: 7%;
+    background: #fff;
+    width: 50rem;
+    height: 5rem;
+    display: flex;
+    align-items: center;
+}
+.header .search-from.active{
+    transform: scaleY(1);
+}
+.header .search-from input{
+    height: 100%;
+    width: 100%;
+    font-size: 1.6rem;
+    color: var(--black);
+    padding:1rem;
+    text-transform: none;
+    transform-origin: top;
+}
+.header .search-from label{
+    height: 100%;
+    width: 100%;
+    font-size: 1.6rem;
+    color: var(--black);
+    padding: 1rem;
+    text-transform: none;
+}
+
+@media (max-width:991px){
+    html{
+        font-size: 55%;
+    }
+    .header{
+        padding: 1.5rem 2rem;
+    }
+}
+
+@media (max-width:768px){
+    
+    #menu-btn{
+        display: none;
+    }
+    .header .navbar{
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        background: #fff;
+        width: 30rem;
+        height:  calc(100vh - 9.5rem);
+    }
+    .header .navbar .active{
+        right: 0;
+    }
+    .header .navbar a{
+        color: var(--black);
+        display: block;
+        margin: 1.5rem;
+        padding: 5rem;
+        font-size: 2rem;
+    }
+    .header .search-from{
+        width: 90%;
+        right: 2rem;
+    }
+}
+@media (max-width:991px){
+    html{
+        font-size: 50;
+    }
+
+.home{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background: url(sean-tay-kaisa-sketch3.jpg) no-repeat;t
+    background-size: cover;
+    background-position: center;
+}
