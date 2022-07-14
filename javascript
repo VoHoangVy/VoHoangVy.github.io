@@ -86,7 +86,6 @@
         </div>
       </div>
 </body>
-</html>
 <style>
 * {
     box-sizing: border-box;
@@ -217,3 +216,4 @@ const form = document.getElementById('output').addEventListener('submit', (e) =>
     document.querySelector('.output-sothich').textContent = `Sở thích: ${sothichArray.join(', ')}`;
 });
 </script>
+</html>
