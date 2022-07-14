@@ -1,1 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài Tập Javascript 2</title>
+  </head>
+
+<body>
+    <h2>Javascript </h2>
+    <div class="container">
+        <div class="trai">
+            <form id="output">
+                <div class="ten">
+                    <label for="ten">Họ và Tên:</label>
+                    <input type="text" id="nhapten">
+                </div>
+                <div class="email">
+                    <label for="name">Email:</label>
+                    <input type="text" id="nhapemail">
+                </div>
+                <div class="gioitinh">
+                    <label for="gioitinh">Giới tính:</label>
+                    <div class="chongioitinh">
+                        <div class="nam">
+                            <input type="radio" name="gioitinh" value="Nam" id="chongioitinh">
+                            <label for="nam">Nam</label>
+                        </div>
+                        <div class="nu">
+                            <input type="radio" name="gioitinh" value="Nữ" id="chongioitinh">
+                            <label for="nu">Nữ</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="quoctich">
+                    <label for="quoctich">Quốc Tịch:</label>
+                    <select name="chonquoctich" id="chonquoctich">
+                
+                    <option selected="selected"> </option>
+                
+                    <option value="Viet Nam">Viet Nam</option>
+                
+                      <option value="Australia">Korea </option>
+                
+                      <option value="Campuchia">Japan </option>
+                
+                      <option value="Lao">China </option>
+                
+                    <select>
+                
+                    </div>
+                <div class="sothich">
+                    <label for="sothich">Sở thích:</label>
+                            <div class="chonsothich">
+                                <div class="dulich">
+                                    <input type="checkbox" name="sothich" value="Du lịch">
+                                  <label for="dulich">Chơi game </label>
+                                </div>
+                                <div class="laptrinh">
+                                    <input type="checkbox" name="sothich" value="Lập Trình">
+                                    <label for="laptrinh">Lập Trình</label>
+                                </div>
+                                <div class="thethao">
+                                    <input type="checkbox" name="sothich" value="Thể Thao">
+                                    <label for="thethao">Thể Thao</label>
+                                </div>
+                            </div>
+                </div>
+                <div class="button">
+                    <input type="submit" value="Xác Nhận" id="submit">
+                    <input type="reset">
+                </div>
+                </div>
+                <div class="phai">
+                    <div class="hienthi">
+                        <p class="output-ten">Họ và Tên:</p>
+                        <p class="output-email">Email:</p>
+                        <p class="output-gioitinh">Giới tính:</p>
+                        <p class="output-quoctich">Quốc tịch:</p>
+                        <p class="output-sothich">Sở thích:</p>
+                    </div>
+                </div>
+            </from>
+        </div>
+      </div>
+</body>
+</html>
+<style>
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+h2{
+    text-align: center;
+    padding: 20px;
+}
+.container {
+                display: flex;
+                width: 60rem;
+                height: 30rem;
+                margin: auto;
+  background: #CDB051;
+
+.trai {
+    height: 500px;
+    flex-basis: 50%;
+    margin: auto;
+    background: #e57335;
+    display: block;
+}
+
+.ten {
+    float: left;
+    margin-left: 20px;
+    font-weight: bold;
+    padding: 10px;
+}
+
+.email {
+    float: left;
+    margin-left: 20px;
+    font-weight: bold;
+    padding: 10px;
+}
+
+.gioitinh {
+    float: left;
+    margin-left: 20px;
+    font-weight: bold;
+    padding: 10px;
+    display: flex;
+}
+
+.quoctich {
+    margin-left: 20px;
+    font-weight: bold;
+    float: left;
+    padding: 10px;
+}
+
+.sothich {
+    font-weight: bold;
+    float: left;
+    margin-left: 20px;
+    padding: 10px;
+}
+
+.sothich .chonsothich {
+    margin-left: 70px;
+}
+
+button {
+    margin-top: 40px;
+    font-weight: bold;
+    padding: 10px 20px;
+    text-align: center;
+}
+
+.phai {
+    height: 500px;
+    flex-basis: 50%;
+    background: #ffff00;
+}
+
+.hienthi {
+    font-weight: bold;
+    float: left;
+    margin-left: 20px;
+}
+
+.hienthi p {
+    padding: 20px;
+}
+
+input[type="submit"],
+input[type="reset"] {
+    width: 100px;
+    padding: 10px 0;
+    font-weight: bold;
+}
+
+.button {
+    float: left;
+    margin-left: 70px;
+    margin-top: 10px;
+}
+</style>
+<scrpit>
+const form = document.getElementById('output').addEventListener('submit', (e) => {
+    e.preventDefault();
+    const ten = document.getElementById('nhapten').value;
+    document.querySelector('.output-ten').textContent = `Họ và Tên: ${ten}`;
+
+    const email = document.getElementById('nhapemail').value;
+    document.querySelector('.output-email').textContent = `Email: ${email}`;
+
+    const genders = document.getElementsByName('gioitinh');
+    genders.forEach(gioitinh => {
+        if (gioitinh.checked == true) {
+            document.querySelector('.output-gioitinh').textContent = `Giới tính: ${gioitinh.value}`;
+        };
+    });
+
+    const quoctich = document.getElementById('chonquoctich').value;
+    document.querySelector('.output-quoctich').textContent = `Quốc tịch: ${quoctich}`;
+
+    const hobbies = document.getElementsByName('sothich');
+    sothichArray = [];
+    hobbies.forEach(sothich => {
+        if (sothich.checked == true) {
+            sothichArray.push(sothich.value);
+        };
+    });
+    document.querySelector('.output-sothich').textContent = `Sở thích: ${sothichArray.join(', ')}`;
+});
+</script>
