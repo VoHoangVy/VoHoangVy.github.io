@@ -90,3 +90,4 @@ function gioitinh() {
     document.getElementById("demo").innerHTML = "Nam";
   }
 </scirpt> 
+d
