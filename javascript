@@ -73,6 +73,8 @@ button {
     z-index: -1;
     background: #fff;
   }
+  </style>
+  <script>
   
   button:hover {
     background-image: linear-gradient(-45deg, #ffff00, #e53935);
@@ -87,3 +89,4 @@ function ngaysinh() {
 function gioitinh() {
     document.getElementById("demo").innerHTML = "Nam";
   }
+</scirpt>
